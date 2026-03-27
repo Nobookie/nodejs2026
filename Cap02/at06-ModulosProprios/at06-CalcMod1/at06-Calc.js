@@ -1,0 +1,6 @@
+const calculadora = require('./calculadora')
+console.log(calculadora.soma(10,10))
+console.log(calculadora.sub(50,10))
+console.log(calculadora.mult(9,8))
+console.log(calculadora.div(100,4))
+console.log(calculadora.div(10,0))
