@@ -1,7 +1,7 @@
 // server.js
 import http from 'node:http'
 const server = http.createServer((req, res) => {
-    // Converte parâmetros da URL usando a API moderna
+    // Converte parâmetros da URL
     const urlObj = new URL(req.url, `http://${req.headers.host}`)
     const nome = urlObj.searchParams.get('nome')
 
