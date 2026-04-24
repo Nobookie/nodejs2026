@@ -18,7 +18,7 @@ app.get('/', (req, res) => res.status(200).sendFile(path.join(baseDir, 'index.ht
 app.get('/cadastrar', (req, res) => res.status(200).sendFile(path.join(baseDir, 'cadastrar.html')))
 
 // Middleware para Erro 404
-app.use((req, res) =>res.status(404).sendFile(path.join(baseDir, '404.html').status(200)))
+app.use((req, res) =>res.status(404).sendFile(path.join(baseDir, '404.html')))
 
 app.listen(PORT, () => {
     console.log(`🚀 Servidor rodando em: http://localhost:${PORT}`)

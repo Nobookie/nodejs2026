@@ -2,11 +2,13 @@ import express from 'express'
 
 const app = express()
 const PORT = process.env.PORT || 3200
+app.get('/', function (req, res){
+    res.send('<h1>Tela inicial</h1>')
+})
 
-// Parâmetros opcionais são definidos com '?' Exemplo: /bemvindo/:nome?
-app.get('/bemvindo/:nome?', (req, res) => {
+app.get('/bemvindo/:nome', (req, res) => {
     const { nome } = req.params // Destructuring para extrair o parâmetro
-    nome = nome? nome:''
+    
     res.send(`<h1>Olá ${nome}, seja bem-vindo!</h1>`)
 })
 

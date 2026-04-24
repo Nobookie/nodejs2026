@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3200
 
 app.get('/', (req, res) => {
     const { nome } = req.query  // Destructuring para extrair 'nome' do objeto query
-
+    
     if (nome) {
         res.send(`<h1>Olá ${nome}, seja bem-vindo!</h1>`)
     } else {
